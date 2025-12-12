@@ -1,12 +1,142 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>My Passion Project!</h1>
-    <hr>
-    <script></script>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Web Designing — Passion & Thesis</title>
+  <meta name="description" content="Website about web designing built around a thesis on creativity, traffic & experience.">
+  <style>
+    :root{--bg:#0b1020;--card:#0f1724;--accent:#ff7ab6;--accent2:#7c5cff;--muted:#9aa7bd;--glass:rgba(255,255,255,0.03);--radius:12px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color-scheme:dark}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:linear-gradient(135deg,#0d0f1a,#1a2640,#4b2a7a);color:#e9f2ff;-webkit-font-smoothing:antialiased;}
+    .wrap{max-width:1100px;margin:36px auto;padding:22px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:600}
+    nav a:hover{color:#fff}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:center;margin-top:26px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(3,8,20,0.6)}
+    h1{font-size:clamp(28px,3.5vw,44px);margin:0}
+    .thesis{margin-top:10px;color:var(--muted);font-size:17px}
+    .cta{display:inline-block;margin-top:16px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#33f6d1);color:#071026;font-weight:700;text-decoration:none}
+
+    .profile{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+    .avatar{width:120px;height:120px;border-radius:16px;background:linear-gradient(135deg,#0b1530,#14223a);display:flex;align-items:center;justify-content:center;font-size:36px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+    .chip{background:var(--glass);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:13px}
+
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+    @media (max-width:900px){.split{grid-template-columns:1fr}}
+    .stat{padding:16px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.005))}
+    .stat h3{margin:0 0 6px}
+    .stat p{margin:0;color:var(--muted)}
+
+    .portfolio{margin-top:22px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));cursor:pointer}
+    .project h4{margin:8px 0 6px}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+
+    footer{margin-top:34px;text-align:center;color:var(--muted);font-size:13px}
+
+    form{display:flex;flex-direction:column;gap:8px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    button{padding:10px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent2),#33f6d1);font-weight:700;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">WD</div>
+        <div>
+          <div style="font-weight:800">Web Designing — Thesis Driven</div>
+          <div style="color:var(--muted);font-size:13px">Exploring design, creativity, traffic, and memorable experiences</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>Why web designing matters</h1>
+        <p class="thesis">"Website designing can be useful and exciting because it can open one’s mind to express their creativity, generate traffic and sales, and it promotes an unforgettable experience."</p>
+        <p style="margin-top:12px;color:var(--muted)">This site is built around that thesis — every section below ties back to how design empowers creativity, drives measurable results, and crafts memorable user journeys.</p>
+        <a class="cta" href="#projects">See how it works</a>
+
+        <div class="portfolio" id="projects">
+          <h2 style="margin-top:20px">Featured projects & experiments</h2>
+          <div class="grid" role="list">
+            <article class="project" role="listitem" tabindex="0" aria-label="Creative portfolio">
+              <div style="height:120px;border-radius:8px;background:linear-gradient(135deg,#14213d,#0f1724);display:flex;align-items:center;justify-content:center;color:var(--muted)">Creative portfolio</div>
+              <h4>Creative portfolio</h4>
+              <p>Experimenting with layout and micro-interactions to encourage expression and discovery.</p>
+            </article>
+            <article class="project" role="listitem" tabindex="0" aria-label="Traffic-driven landing">
+              <div style="height:120px;border-radius:8px;background:linear-gradient(135deg,#1f3a93,#0f1724);display:flex;align-items:center;justify-content:center;color:var(--muted); text-align: center;">Traffic-focused landing</div>
+              <h4>Traffic-focused landing</h4>
+              <p>Optimized headings, CTAs and analytics to increase visitors and conversions.</p>
+            </article>
+            <article class="project" role="listitem" tabindex="0" aria-label="Memorable experiences">
+              <div style="height:120px;border-radius:8px;background:linear-gradient(135deg,#7c5cff,#0038ff);display:flex;align-items:center;justify-content:center;color:#011226; text-align: center;">Memorable experiences</div>
+              <h4>Memorable experiences</h4>
+              <p>Design patterns focused on storytelling and emotional engagement.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card profile" id="about">
+        <div class="avatar">WD</div>
+        <div style="text-align:left">
+          <h3 style="margin:0">About this thesis</h3>
+          <p style="color:var(--muted);margin-top:8px">The core idea here is simple: web design isn't just decoration. It teaches creative thinking, supports business goals by generating traffic and sales, and—when done right—creates an experience users remember. Below are three pillars that connect the thesis to actionable practice.</p>
+        </div>
+
+        <div class="split">
+          <div class="stat">
+            <h3>Express creativity</h3>
+            <p class="small">Design exercises that unlock new visual languages: moodboards, rapid prototyping, and constraint-driven challenges.</p>
+          </div>
+          <div class="stat">
+            <h3>Generate traffic & sales</h3>
+            <p class="small">SEO-first structure, persuasive copy, and conversion-focused layouts increase reach and revenue.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:12px" class="stat">
+          <h3>Promote unforgettable experiences</h3>
+          <p class="small">Microcopy, motion, and thoughtful interactions make products trustworthy and memorable.</p>
+        </div>
+
+        <div style="width:100%;margin-top:12px;text-align:center">
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">UX</span>
+            <span class="chip">SEO</span>
+            <span class="chip">Analytics</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    
+
+    <footer>
+      <div style="color:var(--muted)">Built around the thesis: "Website designing can be useful and exciting because it can open one’s mind to express their creativity, generate traffic and sales, and it promotes an unforgettable experience." — © <span id="yr"></span></div>
+    </footer>
+  </div>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
 </html>
